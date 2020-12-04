@@ -20,3 +20,16 @@ Route::get('/', function () {
 Route::get('/layout', function () {
     return view('layout');
 });
+
+Route::get('/about', function () {
+
+    $articles = App\Models\Article::take(3)->latest()->get();
+
+    return view('about',compact('articles'));
+   // 'articles' => App\Models\Article::latest()->get();
+
+
+
+});
+
+Route::get('/articles/{article}', [\App\Http\Controllers\ArticleController::class,'show']);
