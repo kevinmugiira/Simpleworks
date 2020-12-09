@@ -33,3 +33,4 @@ Route::get('/about', function () {
 });
 
 Route::get('/articles/{article}', [\App\Http\Controllers\ArticleController::class,'show']);
+Route::get('/articles', [\App\Http\Controllers\ArticleController::class, 'index']);

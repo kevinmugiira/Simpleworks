@@ -14,7 +14,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return view('articles');
+        $articles = Article::latest()->get();
+        return view('articles.index', ['articl' => $articles ]);
     }
 
     /**
@@ -46,8 +47,9 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        $article = Article::find($id);
-        return view('articles.show', ['article' => $article]);
+
+        $artic = Article::find($id);
+        return view('articles/show', ['artc' => $artic]);
     }
 
     /**
