@@ -23,7 +23,7 @@ Route::get('/layout', function () {
 
 Route::get('/about', function () {
 
-    $articles = App\Models\Article::take(3)->latest()->get();
+    $articles = App\Models\Article::take(4)->latest()->get();
 
     return view('about',compact('articles'));
    // 'articles' => App\Models\Article::latest()->get();
@@ -32,5 +32,9 @@ Route::get('/about', function () {
 
 });
 
-Route::get('/articles/{article}', [\App\Http\Controllers\ArticleController::class,'show']);
 Route::get('/articles', [\App\Http\Controllers\ArticleController::class, 'index']);
+Route::post('/articles', [\App\Http\Controllers\ArticleController::class, 'store']);
+Route::get('/articles/create', [\App\Http\Controllers\ArticleController::class, 'create']);
+Route::get('/articles/{article}', [\App\Http\Controllers\ArticleController::class,'show']);
+
+

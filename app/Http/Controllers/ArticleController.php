@@ -25,7 +25,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('articles/create');
     }
 
     /**
@@ -34,9 +35,9 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        die('hello Kenya');
     }
 
     /**
@@ -47,6 +48,7 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
+
 
         $artic = Article::find($id);
         return view('articles/show', ['artc' => $artic]);

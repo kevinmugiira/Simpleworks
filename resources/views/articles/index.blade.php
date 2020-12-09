@@ -14,7 +14,7 @@
                     <li><a href="/" accesskey="1" title="">Homepage</a></li>
                     <li><a href="#" accesskey="2" title="">Our Clients</a></li>
                     <li class="#"><a href="/about" accesskey="3" title="">About Us</a></li>
-                    <li class="current_page_item"><a href="/article" accesskey="4" title="">Articles</a></li>
+                    <li class="current_page_item"><a href="/articles" accesskey="4" title="">Articles</a></li>
                     <li><a href="/contact" accesskey="5" title="">Contact Us</a></li>
                 </ul>
             </div>
@@ -27,7 +27,7 @@
             <div id="content">
                 @foreach($articl as $arti)
                 <div class="title">
-                    <h2><a href="/article/{{$arti->id}}">{{$arti->title}}</a></h2>
+                    <h2><a href="/articles/{{$arti->id}}">{{$arti->title}}</a></h2>
                 </div>
                 <p><img src="/assets/images/banner.jpg" alt="" class="image image-full" /> </p>
                 <p>{{$arti->body}}</p>
