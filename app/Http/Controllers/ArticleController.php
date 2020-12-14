@@ -37,7 +37,7 @@ class ArticleController extends Controller
      */
     public function store()
     {
-        die('hello Kenya');
+        die('This is mama Africa!');
     }
 
     /**

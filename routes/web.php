@@ -32,9 +32,11 @@ Route::get('/about', function () {
 
 });
 
-Route::get('/articles', [\App\Http\Controllers\ArticleController::class, 'index']);
-Route::post('/articles', [\App\Http\Controllers\ArticleController::class, 'store']);
-Route::get('/articles/create', [\App\Http\Controllers\ArticleController::class, 'create']);
-Route::get('/articles/{article}', [\App\Http\Controllers\ArticleController::class,'show']);
+Route::get('/articles', [App\Http\Controllers\ArticleController::class, 'index']);
+Route::post('/articles', [App\Http\Controllers\ArticleController::class, 'store']);
+Route::get('/articles/create', [App\Http\Controllers\ArticleController::class, 'create']);
+Route::get('/articles/{article}', [App\Http\Controllers\ArticleController::class,'show']);
+
+
 
 
