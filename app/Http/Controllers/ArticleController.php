@@ -37,7 +37,15 @@ class ArticleController extends Controller
      */
     public function store()
     {
-        die('This is mama Africa!');
+        $article = new Article();
+
+        $article->title = \request('title');
+        $article->excerpt = \request('excerpt');
+        $article->body = \request('body');
+
+        $article->save();
+
+        return redirect('/articles');
     }
 
     /**
@@ -62,7 +70,8 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $article = Article::find($id);
+        return view('articles.edit', compact('article'));
     }
 
     /**
@@ -72,9 +81,23 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
-        //
+        \request()->validate([
+           'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
+
+        $article = Article::find($id);
+
+        $article->title = request('title');
+        $article->excerpt = request('excerpt');
+        $article->body = request('body');
+
+        $article->save();
+
+        return redirect('/articles/'.$article->id);
     }
 
     /**

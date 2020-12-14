@@ -2,6 +2,10 @@
 
 
 
+@section('head')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"/>
+    @stop
+
 @section('content')
 
 
@@ -35,7 +39,11 @@
                         Title
                     </label>
                     <div class="control">
-                        <input class="input" type="text" name="" id="title">
+                        <input class="input @error('title') is-danger @enderror" type="text" name="title" id="title">
+
+                        @error('title')
+                        <p class="help is-danger">{{ $errors->first('title')}}</p>
+                        @enderror
                     </div>
                 </div>
 

@@ -30,7 +30,7 @@
                     <h2><a href="/articles/{{$arti->id}}">{{$arti->title}}</a></h2>
                 </div>
                 <p><img src="/assets/images/banner.jpg" alt="" class="image image-full" /> </p>
-                <p>{{$arti->body}}</p>
+                <p>{{$arti->excerpt}}</p>
 
                 @endforeach
             </div>
