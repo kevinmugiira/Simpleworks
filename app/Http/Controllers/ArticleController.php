@@ -37,18 +37,30 @@ class ArticleController extends Controller
      */
     public function store()
     {
-        \request()->validate([
+        Article::create($this->validateArticle());
+        /*
+        Article::create(\request()->validate([
             'title' => 'required',
             'excerpt' => 'required',
             'body' => 'required'
-        ]);
+        ]));
+        */
+        /*
         $article = new Article();
 
         $article->title = \request('title');
         $article->excerpt = \request('excerpt');
         $article->body = \request('body');
-
         $article->save();
+        */
+
+        /*
+        Article::create([
+            'title'=> \request('title'),
+            'excerpt' => \request('excerpt'),
+            'body' => \request('body')
+        ]);
+        */
 
         return redirect('/articles');
     }
@@ -59,11 +71,9 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Article $artic)
     {
-
-
-        $artic = Article::find($id);
+        //$artic = Article::find($id);
         return view('articles/show', ['artc' => $artic]);
     }
 
@@ -73,9 +83,9 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Article $article)
     {
-        $article = Article::find($id);
+        //$article = Article::find($id);
         return view('articles.edit', compact('article'));
     }
 
@@ -86,21 +96,26 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update(Article $article)
     {
-        \request()->validate([
+        $article->update($this->validateArticle());
+        /*
+        $article->update(\request()->validate([
            'title' => 'required',
             'excerpt' => 'required',
             'body' => 'required'
-        ]);
+        ]));
+        */
 
-        $article = Article::find($id);
+        //$article = Article::find($id);
 
+        /*
         $article->title = request('title');
         $article->excerpt = request('excerpt');
         $article->body = request('body');
 
         $article->save();
+        */
 
         return redirect('articles/'.$article->id);
     }
@@ -114,5 +129,14 @@ class ArticleController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    protected function validateArticle()
+    {
+        return \request()->validate([
+           'title' => 'required',
+           'excerpt' => 'required',
+           'body' => 'required'
+        ]);
     }
 }
