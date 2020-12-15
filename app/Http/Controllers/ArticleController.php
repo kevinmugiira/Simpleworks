@@ -37,6 +37,11 @@ class ArticleController extends Controller
      */
     public function store()
     {
+        \request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
         $article = new Article();
 
         $article->title = \request('title');
@@ -97,7 +102,7 @@ class ArticleController extends Controller
 
         $article->save();
 
-        return redirect('/articles/'.$article->id);
+        return redirect('articles/'.$article->id);
     }
 
     /**
