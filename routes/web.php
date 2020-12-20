@@ -32,11 +32,11 @@ Route::get('/about', function () {
 
 });
 
-Route::get('/articles', [App\Http\Controllers\ArticleController::class, 'index']);
+Route::get('/articles', [App\Http\Controllers\ArticleController::class, 'index'])->name('articles.index');
 Route::post('/articles', [App\Http\Controllers\ArticleController::class, 'store']);
 Route::get('/articles/create', [App\Http\Controllers\ArticleController::class, 'create']);
 Route::get('/articles/{article}/edit', [App\Http\Controllers\ArticleController::class, 'edit']);
-Route::get('/articles/{artic}', [App\Http\Controllers\ArticleController::class,'show']);
+Route::get('/articles/{artic}', [App\Http\Controllers\ArticleController::class,'show'])->name('articles.show');
 Route::put('/articles/{article}', [App\Http\Controllers\ArticleController::class,'update']);
 
 

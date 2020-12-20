@@ -5,6 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_190440_create_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_190440_create_articles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,7 +176,10 @@
       <workItem from="1607710935068" duration="2587000" />
       <workItem from="1607928507182" duration="9205000" />
       <workItem from="1607965892189" duration="6706000" />
-      <workItem from="1608014027420" duration="5103000" />
+      <workItem from="1608014027420" duration="5768000" />
+      <workItem from="1608276903452" duration="1714000" />
+      <workItem from="1608296661194" duration="7397000" />
+      <workItem from="1608374309200" duration="9139000" />
     </task>
     <servers />
   </component>

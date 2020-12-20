@@ -62,7 +62,7 @@ class ArticleController extends Controller
         ]);
         */
 
-        return redirect('/articles');
+        return redirect(route('articles.index'));
     }
 
     /**
@@ -74,7 +74,7 @@ class ArticleController extends Controller
     public function show(Article $artic)
     {
         //$artic = Article::find($id);
-        return view('articles/show', ['artc' => $artic]);
+        return view('articles.show', ['artc' => $artic]);
     }
 
     /**
@@ -99,7 +99,7 @@ class ArticleController extends Controller
     public function update(Article $article)
     {
         $article->update($this->validateArticle());
-        /*
+        /*  2
         $article->update(\request()->validate([
            'title' => 'required',
             'excerpt' => 'required',
@@ -117,7 +117,7 @@ class ArticleController extends Controller
         $article->save();
         */
 
-        return redirect('articles/'.$article->id);
+        return redirect($article->path());
     }
 
     /**
