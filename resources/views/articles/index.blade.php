@@ -27,7 +27,7 @@
             <div id="content">
                 @foreach($articl as $arti)
                 <div class="title">
-                    <h2><a href="{{ $articles->path() }}">{{$arti->title}}</a></h2>
+                    <h2><a href="{{ $arti->path() }}">{{$arti->title}}</a></h2>
                 </div>
                 <p><img src="/assets/images/banner.jpg" alt="" class="image image-full" /> </p>
                 <p>{{$arti->excerpt}}</p>

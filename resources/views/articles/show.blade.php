@@ -30,6 +30,13 @@
                 </div>
                 <p><img src="/assets/images/banner.jpg" alt="" class="image image-full" /> </p>
                 <p>{{$artc->body}}</p>
+
+                    @foreach($artc->tags as $tag)
+
+                     <a href="#">{{$tag->name}}</a>
+
+                    @endforeach
+
                 </div>
 
         </div>
