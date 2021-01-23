@@ -85,6 +85,23 @@
                     </div>
                 </div>
 
+                <div class="field">
+                    <label class="label" for="body">
+                        Tags
+                    </label>
+                    <div class="control">
+                        <textarea
+                            class="textarea @error('body')is-danger @enderror"
+                            name="body"
+                            id="body"
+                        >{{ old('body') }}</textarea>
+                        @error('tags')
+                        <p class="help is-danger">{{ $errors->first('excerpt') }}</p>
+                        @enderror
+                    </div>
+                </div>
+
+
                 <div class="field is-grouped">
                     <div class="control">
                        <button class="button is-link" type="submit">Submit</button>

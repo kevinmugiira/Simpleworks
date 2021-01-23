@@ -29,13 +29,15 @@
                     <h2>{{$artc->title}}</h2>
                 </div>
                 <p><img src="/assets/images/banner.jpg" alt="" class="image image-full" /> </p>
-                <p>{{$artc->body}}</p>
+                {!! $artc->body !!}
 
+                <p style="margin-top: 1em">
                     @foreach($artc->tags as $tag)
 
-                     <a href="#">{{$tag->name}}</a>
+                     <a href="{{route('articles.index', ['tag' => $tag->name])}}">{{$tag->name}}</a>
 
                     @endforeach
+                </p>
 
                 </div>
 

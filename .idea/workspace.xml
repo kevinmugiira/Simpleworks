@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2d6511ff-1da6-4df8-a7bf-33a2885b5d36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articles/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/articles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/articles/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/show.blade.php" afterDir="false" />
     </list>
@@ -177,7 +178,25 @@
       <workItem from="1608276903452" duration="1714000" />
       <workItem from="1608296661194" duration="7397000" />
       <workItem from="1608374309200" duration="10962000" />
-      <workItem from="1608616391251" duration="8684000" />
+      <workItem from="1608616391251" duration="8791000" />
+      <workItem from="1608650022693" duration="4597000" />
+      <workItem from="1609070495963" duration="290000" />
+      <workItem from="1609261883015" duration="595000" />
+      <workItem from="1609307377949" duration="573000" />
+      <workItem from="1609845141665" duration="230000" />
+      <workItem from="1610469287647" duration="45785000" />
+      <workItem from="1610515516723" duration="1727000" />
+      <workItem from="1610517369898" duration="1713000" />
+      <workItem from="1610519708108" duration="4296000" />
+      <workItem from="1610526318247" duration="579000" />
+      <workItem from="1610527007502" duration="631000" />
+      <workItem from="1610527808771" duration="335000" />
+      <workItem from="1610614553733" duration="517000" />
+      <workItem from="1610615250472" duration="1704000" />
+      <workItem from="1610617073095" duration="1278000" />
+      <workItem from="1610741949710" duration="528000" />
+      <workItem from="1611387571882" duration="889000" />
+      <workItem from="1611391727025" duration="1309000" />
     </task>
     <servers />
   </component>
