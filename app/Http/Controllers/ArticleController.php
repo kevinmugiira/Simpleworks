@@ -31,8 +31,10 @@ class ArticleController extends Controller
      */
     public function create()
     {
-
-        return view('articles/create');
+        //$tags = Tag::all(); //has been inlined from this
+        return view('articles/create', [
+            'tags' => Tag::all()
+            ]);
     }
 
     /**
@@ -43,7 +45,12 @@ class ArticleController extends Controller
      */
     public function store()
     {
-        Article::create($this->validateArticle());
+        $this->validateArticle();
+        $article = new Article(\request(['title','excerpt','body']));
+        $article->user_id = 6;
+        $article->save();
+
+        $article->tags()->attach(\request('tags'));
         /*
         Article::create(\request()->validate([
             'title' => 'required',
@@ -142,7 +149,8 @@ class ArticleController extends Controller
         return \request()->validate([
            'title' => 'required',
            'excerpt' => 'required',
-           'body' => 'required'
+           'body' => 'required',
+            'tags' => 'exists:tags,id'
         ]);
     }
 }
